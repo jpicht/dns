@@ -1,5 +1,7 @@
 package dns
 
+import "strings"
+
 // Holds a bunch of helper functions for dealing with labels.
 
 // SplitDomainName splits a name string into it's labels.
@@ -127,9 +129,12 @@ func Split(s string) []int {
 // Also see PrevLabel.
 func NextLabel(s string, offset int) (i int, end bool) {
 	for i = offset; i < len(s)-1; i++ {
-		if s[i] != '.' {
-			continue
+		if nextIndex := strings.IndexByte(s[i:], '.'); nextIndex == -1 {
+			return len(s), true
+		} else {
+			i += nextIndex
 		}
+
 		j := i - 1
 		for j >= 0 && s[j] == '\\' {
 			j--
@@ -139,9 +144,9 @@ func NextLabel(s string, offset int) (i int, end bool) {
 			continue
 		}
 
-		return i + 1, false
+		return i + 1, i+1 == len(s)
 	}
-	return i + 1, true
+	return i, true
 }
 
 // PrevLabel returns the index of the label when starting from the right and
