@@ -1,5 +1,9 @@
 package dns
 
+import (
+	"strings"
+)
+
 // Holds a bunch of helper functions for dealing with labels.
 
 // SplitDomainName splits a name string into it's labels.
@@ -121,27 +125,36 @@ func Split(s string) []int {
 	}
 }
 
+func isOffsetEscaped(s string, offset int) bool {
+	i := offset - 1
+
+	for i >= 0 && s[i] == '\\' {
+		i--
+	}
+
+	return (offset-i)%2 == 0
+}
+
 // NextLabel returns the index of the start of the next label in the
 // string s starting at offset.
 // The bool end is true when the end of the string has been reached.
 // Also see PrevLabel.
 func NextLabel(s string, offset int) (i int, end bool) {
-	for i = offset; i < len(s)-1; i++ {
-		if s[i] != '.' {
-			continue
-		}
-		j := i - 1
-		for j >= 0 && s[j] == '\\' {
-			j--
-		}
+	i = offset
+	l := len(s)
 
-		if (j-i)%2 == 0 {
-			continue
-		}
-
-		return i + 1, false
+	next := strings.IndexByte(s[i:], '.')
+	if next == -1 {
+		return l, true
 	}
-	return i + 1, true
+
+	i += next
+	ni := i + 1
+	if !isOffsetEscaped(s, i) {
+		return ni, ni == l
+	}
+
+	return NextLabel(s, ni)
 }
 
 // PrevLabel returns the index of the label when starting from the right and
