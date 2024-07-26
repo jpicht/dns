@@ -3,6 +3,9 @@
 [![Go Report Card](https://goreportcard.com/badge/github.com/miekg/dns)](https://goreportcard.com/report/miekg/dns)
 [![](https://godoc.org/github.com/miekg/dns?status.svg)](https://godoc.org/github.com/miekg/dns)
 
+# This is a fork - not regularly maintained!
+I needed access to a few internals, this branch exposes `RR.unpack`.
+
 # Alternative (more granular) approach to a DNS library
 
 > Less is more.
