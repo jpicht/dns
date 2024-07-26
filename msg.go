@@ -611,6 +611,32 @@ func UnpackRR(msg []byte, off int) (rr RR, off1 int, err error) {
 	return UnpackRRWithHeader(h, msg, off)
 }
 
+// FillRR unpacks the payload from msg into rr.
+func FillRR[RR_T RR](h *RR_Header, rr RR_T, msg []byte, off int) (off1 int, err error) {
+	if off < 0 || off > len(msg) {
+		return off, &Error{err: "bad off"}
+	}
+
+	end := off + int(h.Rdlength)
+	if end < off || end > len(msg) {
+		return end, &Error{err: "bad rdlength"}
+	}
+
+	if noRdata(*h) {
+		return off, nil
+	}
+
+	off, err = rr.Unpack(msg, off)
+	if err != nil {
+		return end, err
+	}
+	if off != end {
+		return end, &Error{err: "bad rdlength"}
+	}
+
+	return off, nil
+}
+
 // UnpackRRWithHeader unpacks the record type specific payload given an existing
 // RR_Header.
 func UnpackRRWithHeader(h RR_Header, msg []byte, off int) (rr RR, off1 int, err error) {
