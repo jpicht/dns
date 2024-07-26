@@ -634,7 +634,7 @@ func UnpackRRWithHeader(h RR_Header, msg []byte, off int) (rr RR, off1 int, err 
 		return rr, off, nil
 	}
 
-	off, err = rr.unpack(msg, off)
+	off, err = rr.Unpack(msg, off)
 	if err != nil {
 		return nil, end, err
 	}

@@ -61,7 +61,7 @@ func loadModule(name string) (*types.Package, error) {
 
 func main() {
 	// Import and type-check the package
-	pkg, err := loadModule("github.com/miekg/dns")
+	pkg, err := loadModule("github.com/jpicht/dns")
 	fatalIfErr(err)
 	scope := pkg.Scope()
 
@@ -200,7 +200,7 @@ if rr.%s != "-" {
 		o := scope.Lookup(name)
 		st, _ := getTypeStruct(o.Type(), scope)
 
-		fmt.Fprintf(b, "func (rr *%s) unpack(msg []byte, off int) (off1 int, err error) {\n", name)
+		fmt.Fprintf(b, "func (rr *%s) Unpack(msg []byte, off int) (off1 int, err error) {\n", name)
 		fmt.Fprint(b, `rdStart := off
 _ = rdStart
 

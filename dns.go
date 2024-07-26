@@ -48,11 +48,11 @@ type RR interface {
 	// already have been packed into msg.
 	pack(msg []byte, off int, compression compressionMap, compress bool) (off1 int, err error)
 
-	// unpack unpacks an RR from wire format.
+	// Unpack unpacks an RR from wire format.
 	//
 	// This will only be called on a new and empty RR type with only the header populated. It
 	// will only be called if the record's RDATA is non-empty.
-	unpack(msg []byte, off int) (off1 int, err error)
+	Unpack(msg []byte, off int) (off1 int, err error)
 
 	// parse parses an RR from zone file format.
 	//
@@ -104,7 +104,7 @@ func (h *RR_Header) pack(msg []byte, off int, compression compressionMap, compre
 	return off, nil
 }
 
-func (h *RR_Header) unpack(msg []byte, off int) (int, error) {
+func (h *RR_Header) Unpack(msg []byte, off int) (int, error) {
 	panic("dns: internal error: unpack should never be called on RR_Header")
 }
 
@@ -128,7 +128,7 @@ func (rr *RFC3597) ToRFC3597(r RR) error {
 		return nil
 	}
 
-	_, err = rr.unpack(buf, headerEnd)
+	_, err = rr.Unpack(buf, headerEnd)
 	return err
 }
 
@@ -153,6 +153,6 @@ func (rr *RFC3597) fromRFC3597(r RR) error {
 		return err
 	}
 
-	_, err = r.unpack(msg, 0)
+	_, err = r.Unpack(msg, 0)
 	return err
 }

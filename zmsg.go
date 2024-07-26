@@ -1204,7 +1204,7 @@ func (rr *ZONEMD) pack(msg []byte, off int, compression compressionMap, compress
 
 // unpack*() functions
 
-func (rr *A) unpack(msg []byte, off int) (off1 int, err error) {
+func (rr *A) Unpack(msg []byte, off int) (off1 int, err error) {
 	rdStart := off
 	_ = rdStart
 
@@ -1215,7 +1215,7 @@ func (rr *A) unpack(msg []byte, off int) (off1 int, err error) {
 	return off, nil
 }
 
-func (rr *AAAA) unpack(msg []byte, off int) (off1 int, err error) {
+func (rr *AAAA) Unpack(msg []byte, off int) (off1 int, err error) {
 	rdStart := off
 	_ = rdStart
 
@@ -1226,7 +1226,7 @@ func (rr *AAAA) unpack(msg []byte, off int) (off1 int, err error) {
 	return off, nil
 }
 
-func (rr *AFSDB) unpack(msg []byte, off int) (off1 int, err error) {
+func (rr *AFSDB) Unpack(msg []byte, off int) (off1 int, err error) {
 	rdStart := off
 	_ = rdStart
 
@@ -1244,7 +1244,7 @@ func (rr *AFSDB) unpack(msg []byte, off int) (off1 int, err error) {
 	return off, nil
 }
 
-func (rr *AMTRELAY) unpack(msg []byte, off int) (off1 int, err error) {
+func (rr *AMTRELAY) Unpack(msg []byte, off int) (off1 int, err error) {
 	rdStart := off
 	_ = rdStart
 
@@ -1272,14 +1272,14 @@ func (rr *AMTRELAY) unpack(msg []byte, off int) (off1 int, err error) {
 	return off, nil
 }
 
-func (rr *ANY) unpack(msg []byte, off int) (off1 int, err error) {
+func (rr *ANY) Unpack(msg []byte, off int) (off1 int, err error) {
 	rdStart := off
 	_ = rdStart
 
 	return off, nil
 }
 
-func (rr *APL) unpack(msg []byte, off int) (off1 int, err error) {
+func (rr *APL) Unpack(msg []byte, off int) (off1 int, err error) {
 	rdStart := off
 	_ = rdStart
 
@@ -1290,7 +1290,7 @@ func (rr *APL) unpack(msg []byte, off int) (off1 int, err error) {
 	return off, nil
 }
 
-func (rr *AVC) unpack(msg []byte, off int) (off1 int, err error) {
+func (rr *AVC) Unpack(msg []byte, off int) (off1 int, err error) {
 	rdStart := off
 	_ = rdStart
 
@@ -1301,7 +1301,7 @@ func (rr *AVC) unpack(msg []byte, off int) (off1 int, err error) {
 	return off, nil
 }
 
-func (rr *CAA) unpack(msg []byte, off int) (off1 int, err error) {
+func (rr *CAA) Unpack(msg []byte, off int) (off1 int, err error) {
 	rdStart := off
 	_ = rdStart
 
@@ -1326,7 +1326,7 @@ func (rr *CAA) unpack(msg []byte, off int) (off1 int, err error) {
 	return off, nil
 }
 
-func (rr *CDNSKEY) unpack(msg []byte, off int) (off1 int, err error) {
+func (rr *CDNSKEY) Unpack(msg []byte, off int) (off1 int, err error) {
 	rdStart := off
 	_ = rdStart
 
@@ -1358,7 +1358,7 @@ func (rr *CDNSKEY) unpack(msg []byte, off int) (off1 int, err error) {
 	return off, nil
 }
 
-func (rr *CDS) unpack(msg []byte, off int) (off1 int, err error) {
+func (rr *CDS) Unpack(msg []byte, off int) (off1 int, err error) {
 	rdStart := off
 	_ = rdStart
 
@@ -1390,7 +1390,7 @@ func (rr *CDS) unpack(msg []byte, off int) (off1 int, err error) {
 	return off, nil
 }
 
-func (rr *CERT) unpack(msg []byte, off int) (off1 int, err error) {
+func (rr *CERT) Unpack(msg []byte, off int) (off1 int, err error) {
 	rdStart := off
 	_ = rdStart
 
@@ -1422,7 +1422,7 @@ func (rr *CERT) unpack(msg []byte, off int) (off1 int, err error) {
 	return off, nil
 }
 
-func (rr *CNAME) unpack(msg []byte, off int) (off1 int, err error) {
+func (rr *CNAME) Unpack(msg []byte, off int) (off1 int, err error) {
 	rdStart := off
 	_ = rdStart
 
@@ -1433,7 +1433,7 @@ func (rr *CNAME) unpack(msg []byte, off int) (off1 int, err error) {
 	return off, nil
 }
 
-func (rr *CSYNC) unpack(msg []byte, off int) (off1 int, err error) {
+func (rr *CSYNC) Unpack(msg []byte, off int) (off1 int, err error) {
 	rdStart := off
 	_ = rdStart
 
@@ -1458,7 +1458,7 @@ func (rr *CSYNC) unpack(msg []byte, off int) (off1 int, err error) {
 	return off, nil
 }
 
-func (rr *DHCID) unpack(msg []byte, off int) (off1 int, err error) {
+func (rr *DHCID) Unpack(msg []byte, off int) (off1 int, err error) {
 	rdStart := off
 	_ = rdStart
 
@@ -1469,7 +1469,7 @@ func (rr *DHCID) unpack(msg []byte, off int) (off1 int, err error) {
 	return off, nil
 }
 
-func (rr *DLV) unpack(msg []byte, off int) (off1 int, err error) {
+func (rr *DLV) Unpack(msg []byte, off int) (off1 int, err error) {
 	rdStart := off
 	_ = rdStart
 
@@ -1501,7 +1501,7 @@ func (rr *DLV) unpack(msg []byte, off int) (off1 int, err error) {
 	return off, nil
 }
 
-func (rr *DNAME) unpack(msg []byte, off int) (off1 int, err error) {
+func (rr *DNAME) Unpack(msg []byte, off int) (off1 int, err error) {
 	rdStart := off
 	_ = rdStart
 
@@ -1512,7 +1512,7 @@ func (rr *DNAME) unpack(msg []byte, off int) (off1 int, err error) {
 	return off, nil
 }
 
-func (rr *DNSKEY) unpack(msg []byte, off int) (off1 int, err error) {
+func (rr *DNSKEY) Unpack(msg []byte, off int) (off1 int, err error) {
 	rdStart := off
 	_ = rdStart
 
@@ -1544,7 +1544,7 @@ func (rr *DNSKEY) unpack(msg []byte, off int) (off1 int, err error) {
 	return off, nil
 }
 
-func (rr *DS) unpack(msg []byte, off int) (off1 int, err error) {
+func (rr *DS) Unpack(msg []byte, off int) (off1 int, err error) {
 	rdStart := off
 	_ = rdStart
 
@@ -1576,7 +1576,7 @@ func (rr *DS) unpack(msg []byte, off int) (off1 int, err error) {
 	return off, nil
 }
 
-func (rr *EID) unpack(msg []byte, off int) (off1 int, err error) {
+func (rr *EID) Unpack(msg []byte, off int) (off1 int, err error) {
 	rdStart := off
 	_ = rdStart
 
@@ -1587,7 +1587,7 @@ func (rr *EID) unpack(msg []byte, off int) (off1 int, err error) {
 	return off, nil
 }
 
-func (rr *EUI48) unpack(msg []byte, off int) (off1 int, err error) {
+func (rr *EUI48) Unpack(msg []byte, off int) (off1 int, err error) {
 	rdStart := off
 	_ = rdStart
 
@@ -1598,7 +1598,7 @@ func (rr *EUI48) unpack(msg []byte, off int) (off1 int, err error) {
 	return off, nil
 }
 
-func (rr *EUI64) unpack(msg []byte, off int) (off1 int, err error) {
+func (rr *EUI64) Unpack(msg []byte, off int) (off1 int, err error) {
 	rdStart := off
 	_ = rdStart
 
@@ -1609,7 +1609,7 @@ func (rr *EUI64) unpack(msg []byte, off int) (off1 int, err error) {
 	return off, nil
 }
 
-func (rr *GID) unpack(msg []byte, off int) (off1 int, err error) {
+func (rr *GID) Unpack(msg []byte, off int) (off1 int, err error) {
 	rdStart := off
 	_ = rdStart
 
@@ -1620,7 +1620,7 @@ func (rr *GID) unpack(msg []byte, off int) (off1 int, err error) {
 	return off, nil
 }
 
-func (rr *GPOS) unpack(msg []byte, off int) (off1 int, err error) {
+func (rr *GPOS) Unpack(msg []byte, off int) (off1 int, err error) {
 	rdStart := off
 	_ = rdStart
 
@@ -1645,7 +1645,7 @@ func (rr *GPOS) unpack(msg []byte, off int) (off1 int, err error) {
 	return off, nil
 }
 
-func (rr *HINFO) unpack(msg []byte, off int) (off1 int, err error) {
+func (rr *HINFO) Unpack(msg []byte, off int) (off1 int, err error) {
 	rdStart := off
 	_ = rdStart
 
@@ -1663,7 +1663,7 @@ func (rr *HINFO) unpack(msg []byte, off int) (off1 int, err error) {
 	return off, nil
 }
 
-func (rr *HIP) unpack(msg []byte, off int) (off1 int, err error) {
+func (rr *HIP) Unpack(msg []byte, off int) (off1 int, err error) {
 	rdStart := off
 	_ = rdStart
 
@@ -1703,7 +1703,7 @@ func (rr *HIP) unpack(msg []byte, off int) (off1 int, err error) {
 	return off, nil
 }
 
-func (rr *HTTPS) unpack(msg []byte, off int) (off1 int, err error) {
+func (rr *HTTPS) Unpack(msg []byte, off int) (off1 int, err error) {
 	rdStart := off
 	_ = rdStart
 
@@ -1728,7 +1728,7 @@ func (rr *HTTPS) unpack(msg []byte, off int) (off1 int, err error) {
 	return off, nil
 }
 
-func (rr *IPSECKEY) unpack(msg []byte, off int) (off1 int, err error) {
+func (rr *IPSECKEY) Unpack(msg []byte, off int) (off1 int, err error) {
 	rdStart := off
 	_ = rdStart
 
@@ -1770,7 +1770,7 @@ func (rr *IPSECKEY) unpack(msg []byte, off int) (off1 int, err error) {
 	return off, nil
 }
 
-func (rr *ISDN) unpack(msg []byte, off int) (off1 int, err error) {
+func (rr *ISDN) Unpack(msg []byte, off int) (off1 int, err error) {
 	rdStart := off
 	_ = rdStart
 
@@ -1788,7 +1788,7 @@ func (rr *ISDN) unpack(msg []byte, off int) (off1 int, err error) {
 	return off, nil
 }
 
-func (rr *KEY) unpack(msg []byte, off int) (off1 int, err error) {
+func (rr *KEY) Unpack(msg []byte, off int) (off1 int, err error) {
 	rdStart := off
 	_ = rdStart
 
@@ -1820,7 +1820,7 @@ func (rr *KEY) unpack(msg []byte, off int) (off1 int, err error) {
 	return off, nil
 }
 
-func (rr *KX) unpack(msg []byte, off int) (off1 int, err error) {
+func (rr *KX) Unpack(msg []byte, off int) (off1 int, err error) {
 	rdStart := off
 	_ = rdStart
 
@@ -1838,7 +1838,7 @@ func (rr *KX) unpack(msg []byte, off int) (off1 int, err error) {
 	return off, nil
 }
 
-func (rr *L32) unpack(msg []byte, off int) (off1 int, err error) {
+func (rr *L32) Unpack(msg []byte, off int) (off1 int, err error) {
 	rdStart := off
 	_ = rdStart
 
@@ -1856,7 +1856,7 @@ func (rr *L32) unpack(msg []byte, off int) (off1 int, err error) {
 	return off, nil
 }
 
-func (rr *L64) unpack(msg []byte, off int) (off1 int, err error) {
+func (rr *L64) Unpack(msg []byte, off int) (off1 int, err error) {
 	rdStart := off
 	_ = rdStart
 
@@ -1874,7 +1874,7 @@ func (rr *L64) unpack(msg []byte, off int) (off1 int, err error) {
 	return off, nil
 }
 
-func (rr *LOC) unpack(msg []byte, off int) (off1 int, err error) {
+func (rr *LOC) Unpack(msg []byte, off int) (off1 int, err error) {
 	rdStart := off
 	_ = rdStart
 
@@ -1927,7 +1927,7 @@ func (rr *LOC) unpack(msg []byte, off int) (off1 int, err error) {
 	return off, nil
 }
 
-func (rr *LP) unpack(msg []byte, off int) (off1 int, err error) {
+func (rr *LP) Unpack(msg []byte, off int) (off1 int, err error) {
 	rdStart := off
 	_ = rdStart
 
@@ -1945,7 +1945,7 @@ func (rr *LP) unpack(msg []byte, off int) (off1 int, err error) {
 	return off, nil
 }
 
-func (rr *MB) unpack(msg []byte, off int) (off1 int, err error) {
+func (rr *MB) Unpack(msg []byte, off int) (off1 int, err error) {
 	rdStart := off
 	_ = rdStart
 
@@ -1956,7 +1956,7 @@ func (rr *MB) unpack(msg []byte, off int) (off1 int, err error) {
 	return off, nil
 }
 
-func (rr *MD) unpack(msg []byte, off int) (off1 int, err error) {
+func (rr *MD) Unpack(msg []byte, off int) (off1 int, err error) {
 	rdStart := off
 	_ = rdStart
 
@@ -1967,7 +1967,7 @@ func (rr *MD) unpack(msg []byte, off int) (off1 int, err error) {
 	return off, nil
 }
 
-func (rr *MF) unpack(msg []byte, off int) (off1 int, err error) {
+func (rr *MF) Unpack(msg []byte, off int) (off1 int, err error) {
 	rdStart := off
 	_ = rdStart
 
@@ -1978,7 +1978,7 @@ func (rr *MF) unpack(msg []byte, off int) (off1 int, err error) {
 	return off, nil
 }
 
-func (rr *MG) unpack(msg []byte, off int) (off1 int, err error) {
+func (rr *MG) Unpack(msg []byte, off int) (off1 int, err error) {
 	rdStart := off
 	_ = rdStart
 
@@ -1989,7 +1989,7 @@ func (rr *MG) unpack(msg []byte, off int) (off1 int, err error) {
 	return off, nil
 }
 
-func (rr *MINFO) unpack(msg []byte, off int) (off1 int, err error) {
+func (rr *MINFO) Unpack(msg []byte, off int) (off1 int, err error) {
 	rdStart := off
 	_ = rdStart
 
@@ -2007,7 +2007,7 @@ func (rr *MINFO) unpack(msg []byte, off int) (off1 int, err error) {
 	return off, nil
 }
 
-func (rr *MR) unpack(msg []byte, off int) (off1 int, err error) {
+func (rr *MR) Unpack(msg []byte, off int) (off1 int, err error) {
 	rdStart := off
 	_ = rdStart
 
@@ -2018,7 +2018,7 @@ func (rr *MR) unpack(msg []byte, off int) (off1 int, err error) {
 	return off, nil
 }
 
-func (rr *MX) unpack(msg []byte, off int) (off1 int, err error) {
+func (rr *MX) Unpack(msg []byte, off int) (off1 int, err error) {
 	rdStart := off
 	_ = rdStart
 
@@ -2036,7 +2036,7 @@ func (rr *MX) unpack(msg []byte, off int) (off1 int, err error) {
 	return off, nil
 }
 
-func (rr *NAPTR) unpack(msg []byte, off int) (off1 int, err error) {
+func (rr *NAPTR) Unpack(msg []byte, off int) (off1 int, err error) {
 	rdStart := off
 	_ = rdStart
 
@@ -2082,7 +2082,7 @@ func (rr *NAPTR) unpack(msg []byte, off int) (off1 int, err error) {
 	return off, nil
 }
 
-func (rr *NID) unpack(msg []byte, off int) (off1 int, err error) {
+func (rr *NID) Unpack(msg []byte, off int) (off1 int, err error) {
 	rdStart := off
 	_ = rdStart
 
@@ -2100,7 +2100,7 @@ func (rr *NID) unpack(msg []byte, off int) (off1 int, err error) {
 	return off, nil
 }
 
-func (rr *NIMLOC) unpack(msg []byte, off int) (off1 int, err error) {
+func (rr *NIMLOC) Unpack(msg []byte, off int) (off1 int, err error) {
 	rdStart := off
 	_ = rdStart
 
@@ -2111,7 +2111,7 @@ func (rr *NIMLOC) unpack(msg []byte, off int) (off1 int, err error) {
 	return off, nil
 }
 
-func (rr *NINFO) unpack(msg []byte, off int) (off1 int, err error) {
+func (rr *NINFO) Unpack(msg []byte, off int) (off1 int, err error) {
 	rdStart := off
 	_ = rdStart
 
@@ -2122,7 +2122,7 @@ func (rr *NINFO) unpack(msg []byte, off int) (off1 int, err error) {
 	return off, nil
 }
 
-func (rr *NS) unpack(msg []byte, off int) (off1 int, err error) {
+func (rr *NS) Unpack(msg []byte, off int) (off1 int, err error) {
 	rdStart := off
 	_ = rdStart
 
@@ -2133,7 +2133,7 @@ func (rr *NS) unpack(msg []byte, off int) (off1 int, err error) {
 	return off, nil
 }
 
-func (rr *NSAPPTR) unpack(msg []byte, off int) (off1 int, err error) {
+func (rr *NSAPPTR) Unpack(msg []byte, off int) (off1 int, err error) {
 	rdStart := off
 	_ = rdStart
 
@@ -2144,7 +2144,7 @@ func (rr *NSAPPTR) unpack(msg []byte, off int) (off1 int, err error) {
 	return off, nil
 }
 
-func (rr *NSEC) unpack(msg []byte, off int) (off1 int, err error) {
+func (rr *NSEC) Unpack(msg []byte, off int) (off1 int, err error) {
 	rdStart := off
 	_ = rdStart
 
@@ -2162,7 +2162,7 @@ func (rr *NSEC) unpack(msg []byte, off int) (off1 int, err error) {
 	return off, nil
 }
 
-func (rr *NSEC3) unpack(msg []byte, off int) (off1 int, err error) {
+func (rr *NSEC3) Unpack(msg []byte, off int) (off1 int, err error) {
 	rdStart := off
 	_ = rdStart
 
@@ -2216,7 +2216,7 @@ func (rr *NSEC3) unpack(msg []byte, off int) (off1 int, err error) {
 	return off, nil
 }
 
-func (rr *NSEC3PARAM) unpack(msg []byte, off int) (off1 int, err error) {
+func (rr *NSEC3PARAM) Unpack(msg []byte, off int) (off1 int, err error) {
 	rdStart := off
 	_ = rdStart
 
@@ -2255,7 +2255,7 @@ func (rr *NSEC3PARAM) unpack(msg []byte, off int) (off1 int, err error) {
 	return off, nil
 }
 
-func (rr *NULL) unpack(msg []byte, off int) (off1 int, err error) {
+func (rr *NULL) Unpack(msg []byte, off int) (off1 int, err error) {
 	rdStart := off
 	_ = rdStart
 
@@ -2266,7 +2266,7 @@ func (rr *NULL) unpack(msg []byte, off int) (off1 int, err error) {
 	return off, nil
 }
 
-func (rr *NXT) unpack(msg []byte, off int) (off1 int, err error) {
+func (rr *NXT) Unpack(msg []byte, off int) (off1 int, err error) {
 	rdStart := off
 	_ = rdStart
 
@@ -2284,7 +2284,7 @@ func (rr *NXT) unpack(msg []byte, off int) (off1 int, err error) {
 	return off, nil
 }
 
-func (rr *OPENPGPKEY) unpack(msg []byte, off int) (off1 int, err error) {
+func (rr *OPENPGPKEY) Unpack(msg []byte, off int) (off1 int, err error) {
 	rdStart := off
 	_ = rdStart
 
@@ -2295,7 +2295,7 @@ func (rr *OPENPGPKEY) unpack(msg []byte, off int) (off1 int, err error) {
 	return off, nil
 }
 
-func (rr *OPT) unpack(msg []byte, off int) (off1 int, err error) {
+func (rr *OPT) Unpack(msg []byte, off int) (off1 int, err error) {
 	rdStart := off
 	_ = rdStart
 
@@ -2306,7 +2306,7 @@ func (rr *OPT) unpack(msg []byte, off int) (off1 int, err error) {
 	return off, nil
 }
 
-func (rr *PTR) unpack(msg []byte, off int) (off1 int, err error) {
+func (rr *PTR) Unpack(msg []byte, off int) (off1 int, err error) {
 	rdStart := off
 	_ = rdStart
 
@@ -2317,7 +2317,7 @@ func (rr *PTR) unpack(msg []byte, off int) (off1 int, err error) {
 	return off, nil
 }
 
-func (rr *PX) unpack(msg []byte, off int) (off1 int, err error) {
+func (rr *PX) Unpack(msg []byte, off int) (off1 int, err error) {
 	rdStart := off
 	_ = rdStart
 
@@ -2342,7 +2342,7 @@ func (rr *PX) unpack(msg []byte, off int) (off1 int, err error) {
 	return off, nil
 }
 
-func (rr *RFC3597) unpack(msg []byte, off int) (off1 int, err error) {
+func (rr *RFC3597) Unpack(msg []byte, off int) (off1 int, err error) {
 	rdStart := off
 	_ = rdStart
 
@@ -2353,7 +2353,7 @@ func (rr *RFC3597) unpack(msg []byte, off int) (off1 int, err error) {
 	return off, nil
 }
 
-func (rr *RKEY) unpack(msg []byte, off int) (off1 int, err error) {
+func (rr *RKEY) Unpack(msg []byte, off int) (off1 int, err error) {
 	rdStart := off
 	_ = rdStart
 
@@ -2385,7 +2385,7 @@ func (rr *RKEY) unpack(msg []byte, off int) (off1 int, err error) {
 	return off, nil
 }
 
-func (rr *RP) unpack(msg []byte, off int) (off1 int, err error) {
+func (rr *RP) Unpack(msg []byte, off int) (off1 int, err error) {
 	rdStart := off
 	_ = rdStart
 
@@ -2403,7 +2403,7 @@ func (rr *RP) unpack(msg []byte, off int) (off1 int, err error) {
 	return off, nil
 }
 
-func (rr *RRSIG) unpack(msg []byte, off int) (off1 int, err error) {
+func (rr *RRSIG) Unpack(msg []byte, off int) (off1 int, err error) {
 	rdStart := off
 	_ = rdStart
 
@@ -2470,7 +2470,7 @@ func (rr *RRSIG) unpack(msg []byte, off int) (off1 int, err error) {
 	return off, nil
 }
 
-func (rr *RT) unpack(msg []byte, off int) (off1 int, err error) {
+func (rr *RT) Unpack(msg []byte, off int) (off1 int, err error) {
 	rdStart := off
 	_ = rdStart
 
@@ -2488,7 +2488,7 @@ func (rr *RT) unpack(msg []byte, off int) (off1 int, err error) {
 	return off, nil
 }
 
-func (rr *SIG) unpack(msg []byte, off int) (off1 int, err error) {
+func (rr *SIG) Unpack(msg []byte, off int) (off1 int, err error) {
 	rdStart := off
 	_ = rdStart
 
@@ -2555,7 +2555,7 @@ func (rr *SIG) unpack(msg []byte, off int) (off1 int, err error) {
 	return off, nil
 }
 
-func (rr *SMIMEA) unpack(msg []byte, off int) (off1 int, err error) {
+func (rr *SMIMEA) Unpack(msg []byte, off int) (off1 int, err error) {
 	rdStart := off
 	_ = rdStart
 
@@ -2587,7 +2587,7 @@ func (rr *SMIMEA) unpack(msg []byte, off int) (off1 int, err error) {
 	return off, nil
 }
 
-func (rr *SOA) unpack(msg []byte, off int) (off1 int, err error) {
+func (rr *SOA) Unpack(msg []byte, off int) (off1 int, err error) {
 	rdStart := off
 	_ = rdStart
 
@@ -2640,7 +2640,7 @@ func (rr *SOA) unpack(msg []byte, off int) (off1 int, err error) {
 	return off, nil
 }
 
-func (rr *SPF) unpack(msg []byte, off int) (off1 int, err error) {
+func (rr *SPF) Unpack(msg []byte, off int) (off1 int, err error) {
 	rdStart := off
 	_ = rdStart
 
@@ -2651,7 +2651,7 @@ func (rr *SPF) unpack(msg []byte, off int) (off1 int, err error) {
 	return off, nil
 }
 
-func (rr *SRV) unpack(msg []byte, off int) (off1 int, err error) {
+func (rr *SRV) Unpack(msg []byte, off int) (off1 int, err error) {
 	rdStart := off
 	_ = rdStart
 
@@ -2683,7 +2683,7 @@ func (rr *SRV) unpack(msg []byte, off int) (off1 int, err error) {
 	return off, nil
 }
 
-func (rr *SSHFP) unpack(msg []byte, off int) (off1 int, err error) {
+func (rr *SSHFP) Unpack(msg []byte, off int) (off1 int, err error) {
 	rdStart := off
 	_ = rdStart
 
@@ -2708,7 +2708,7 @@ func (rr *SSHFP) unpack(msg []byte, off int) (off1 int, err error) {
 	return off, nil
 }
 
-func (rr *SVCB) unpack(msg []byte, off int) (off1 int, err error) {
+func (rr *SVCB) Unpack(msg []byte, off int) (off1 int, err error) {
 	rdStart := off
 	_ = rdStart
 
@@ -2733,7 +2733,7 @@ func (rr *SVCB) unpack(msg []byte, off int) (off1 int, err error) {
 	return off, nil
 }
 
-func (rr *TA) unpack(msg []byte, off int) (off1 int, err error) {
+func (rr *TA) Unpack(msg []byte, off int) (off1 int, err error) {
 	rdStart := off
 	_ = rdStart
 
@@ -2765,7 +2765,7 @@ func (rr *TA) unpack(msg []byte, off int) (off1 int, err error) {
 	return off, nil
 }
 
-func (rr *TALINK) unpack(msg []byte, off int) (off1 int, err error) {
+func (rr *TALINK) Unpack(msg []byte, off int) (off1 int, err error) {
 	rdStart := off
 	_ = rdStart
 
@@ -2783,7 +2783,7 @@ func (rr *TALINK) unpack(msg []byte, off int) (off1 int, err error) {
 	return off, nil
 }
 
-func (rr *TKEY) unpack(msg []byte, off int) (off1 int, err error) {
+func (rr *TKEY) Unpack(msg []byte, off int) (off1 int, err error) {
 	rdStart := off
 	_ = rdStart
 
@@ -2847,7 +2847,7 @@ func (rr *TKEY) unpack(msg []byte, off int) (off1 int, err error) {
 	return off, nil
 }
 
-func (rr *TLSA) unpack(msg []byte, off int) (off1 int, err error) {
+func (rr *TLSA) Unpack(msg []byte, off int) (off1 int, err error) {
 	rdStart := off
 	_ = rdStart
 
@@ -2879,7 +2879,7 @@ func (rr *TLSA) unpack(msg []byte, off int) (off1 int, err error) {
 	return off, nil
 }
 
-func (rr *TSIG) unpack(msg []byte, off int) (off1 int, err error) {
+func (rr *TSIG) Unpack(msg []byte, off int) (off1 int, err error) {
 	rdStart := off
 	_ = rdStart
 
@@ -2943,7 +2943,7 @@ func (rr *TSIG) unpack(msg []byte, off int) (off1 int, err error) {
 	return off, nil
 }
 
-func (rr *TXT) unpack(msg []byte, off int) (off1 int, err error) {
+func (rr *TXT) Unpack(msg []byte, off int) (off1 int, err error) {
 	rdStart := off
 	_ = rdStart
 
@@ -2954,7 +2954,7 @@ func (rr *TXT) unpack(msg []byte, off int) (off1 int, err error) {
 	return off, nil
 }
 
-func (rr *UID) unpack(msg []byte, off int) (off1 int, err error) {
+func (rr *UID) Unpack(msg []byte, off int) (off1 int, err error) {
 	rdStart := off
 	_ = rdStart
 
@@ -2965,7 +2965,7 @@ func (rr *UID) unpack(msg []byte, off int) (off1 int, err error) {
 	return off, nil
 }
 
-func (rr *UINFO) unpack(msg []byte, off int) (off1 int, err error) {
+func (rr *UINFO) Unpack(msg []byte, off int) (off1 int, err error) {
 	rdStart := off
 	_ = rdStart
 
@@ -2976,7 +2976,7 @@ func (rr *UINFO) unpack(msg []byte, off int) (off1 int, err error) {
 	return off, nil
 }
 
-func (rr *URI) unpack(msg []byte, off int) (off1 int, err error) {
+func (rr *URI) Unpack(msg []byte, off int) (off1 int, err error) {
 	rdStart := off
 	_ = rdStart
 
@@ -3001,7 +3001,7 @@ func (rr *URI) unpack(msg []byte, off int) (off1 int, err error) {
 	return off, nil
 }
 
-func (rr *X25) unpack(msg []byte, off int) (off1 int, err error) {
+func (rr *X25) Unpack(msg []byte, off int) (off1 int, err error) {
 	rdStart := off
 	_ = rdStart
 
@@ -3012,7 +3012,7 @@ func (rr *X25) unpack(msg []byte, off int) (off1 int, err error) {
 	return off, nil
 }
 
-func (rr *ZONEMD) unpack(msg []byte, off int) (off1 int, err error) {
+func (rr *ZONEMD) Unpack(msg []byte, off int) (off1 int, err error) {
 	rdStart := off
 	_ = rdStart
 
