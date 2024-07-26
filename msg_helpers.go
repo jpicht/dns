@@ -171,6 +171,9 @@ func toBase64(b []byte) string { return base64.StdEncoding.EncodeToString(b) }
 // dynamicUpdate returns true if the Rdlength is zero.
 func noRdata(h RR_Header) bool { return h.Rdlength == 0 }
 
+// dynamicUpdate returns true if the Rdlength is zero.
+func (h RR_Header) noRdata() bool { return h.Rdlength == 0 }
+
 func unpackUint8(msg []byte, off int) (i uint8, off1 int, err error) {
 	if off+1 > len(msg) {
 		return 0, len(msg), &Error{err: "overflow unpacking uint8"}
