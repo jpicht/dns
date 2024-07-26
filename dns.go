@@ -46,6 +46,10 @@ type RR interface {
 
 	// pack packs the records RDATA into wire format. The header will
 	// already have been packed into msg.
+	fill(hdr RR_Header, msg []byte, off int) (off1 int, err error)
+
+	// pack packs the records RDATA into wire format. The header will
+	// already have been packed into msg.
 	pack(msg []byte, off int, compression compressionMap, compress bool) (off1 int, err error)
 
 	// unpack unpacks an RR from wire format.
@@ -102,6 +106,10 @@ func (h *RR_Header) len(off int, compression map[string]struct{}) int {
 func (h *RR_Header) pack(msg []byte, off int, compression compressionMap, compress bool) (off1 int, err error) {
 	// RR_Header has no RDATA to pack.
 	return off, nil
+}
+
+func (h *RR_Header) fill(RR_Header, []byte, int) (int, error) {
+	panic("dns: internal error: fill should never be called on RR_Header")
 }
 
 func (h *RR_Header) unpack(msg []byte, off int) (int, error) {

@@ -311,6 +311,14 @@ return off, nil
 		fmt.Fprintf(b, "return off, nil }\n\n")
 	}
 
+	fmt.Fprint(b, "// fill*() functions\n\n")
+	for _, name := range namedTypes {
+		fmt.Fprintf(b, "func (rr *%s) fill(hdr RR_Header, msg []byte, off int) (off1 int, err error) {\n", name)
+		fmt.Fprintln(b, "rr.Hdr = hdr")
+		fmt.Fprintln(b, "return rr.unpack(msg, off) }")
+		fmt.Fprintln(b)
+	}
+
 	// gofmt
 	res, err := format.Source(b.Bytes())
 	if err != nil {

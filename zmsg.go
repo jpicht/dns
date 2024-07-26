@@ -3043,3 +3043,400 @@ func (rr *ZONEMD) unpack(msg []byte, off int) (off1 int, err error) {
 	}
 	return off, nil
 }
+
+// fill*() functions
+
+func (rr *A) fill(hdr RR_Header, msg []byte, off int) (off1 int, err error) {
+	rr.Hdr = hdr
+	return rr.unpack(msg, off)
+}
+
+func (rr *AAAA) fill(hdr RR_Header, msg []byte, off int) (off1 int, err error) {
+	rr.Hdr = hdr
+	return rr.unpack(msg, off)
+}
+
+func (rr *AFSDB) fill(hdr RR_Header, msg []byte, off int) (off1 int, err error) {
+	rr.Hdr = hdr
+	return rr.unpack(msg, off)
+}
+
+func (rr *AMTRELAY) fill(hdr RR_Header, msg []byte, off int) (off1 int, err error) {
+	rr.Hdr = hdr
+	return rr.unpack(msg, off)
+}
+
+func (rr *ANY) fill(hdr RR_Header, msg []byte, off int) (off1 int, err error) {
+	rr.Hdr = hdr
+	return rr.unpack(msg, off)
+}
+
+func (rr *APL) fill(hdr RR_Header, msg []byte, off int) (off1 int, err error) {
+	rr.Hdr = hdr
+	return rr.unpack(msg, off)
+}
+
+func (rr *AVC) fill(hdr RR_Header, msg []byte, off int) (off1 int, err error) {
+	rr.Hdr = hdr
+	return rr.unpack(msg, off)
+}
+
+func (rr *CAA) fill(hdr RR_Header, msg []byte, off int) (off1 int, err error) {
+	rr.Hdr = hdr
+	return rr.unpack(msg, off)
+}
+
+func (rr *CDNSKEY) fill(hdr RR_Header, msg []byte, off int) (off1 int, err error) {
+	rr.Hdr = hdr
+	return rr.unpack(msg, off)
+}
+
+func (rr *CDS) fill(hdr RR_Header, msg []byte, off int) (off1 int, err error) {
+	rr.Hdr = hdr
+	return rr.unpack(msg, off)
+}
+
+func (rr *CERT) fill(hdr RR_Header, msg []byte, off int) (off1 int, err error) {
+	rr.Hdr = hdr
+	return rr.unpack(msg, off)
+}
+
+func (rr *CNAME) fill(hdr RR_Header, msg []byte, off int) (off1 int, err error) {
+	rr.Hdr = hdr
+	return rr.unpack(msg, off)
+}
+
+func (rr *CSYNC) fill(hdr RR_Header, msg []byte, off int) (off1 int, err error) {
+	rr.Hdr = hdr
+	return rr.unpack(msg, off)
+}
+
+func (rr *DHCID) fill(hdr RR_Header, msg []byte, off int) (off1 int, err error) {
+	rr.Hdr = hdr
+	return rr.unpack(msg, off)
+}
+
+func (rr *DLV) fill(hdr RR_Header, msg []byte, off int) (off1 int, err error) {
+	rr.Hdr = hdr
+	return rr.unpack(msg, off)
+}
+
+func (rr *DNAME) fill(hdr RR_Header, msg []byte, off int) (off1 int, err error) {
+	rr.Hdr = hdr
+	return rr.unpack(msg, off)
+}
+
+func (rr *DNSKEY) fill(hdr RR_Header, msg []byte, off int) (off1 int, err error) {
+	rr.Hdr = hdr
+	return rr.unpack(msg, off)
+}
+
+func (rr *DS) fill(hdr RR_Header, msg []byte, off int) (off1 int, err error) {
+	rr.Hdr = hdr
+	return rr.unpack(msg, off)
+}
+
+func (rr *EID) fill(hdr RR_Header, msg []byte, off int) (off1 int, err error) {
+	rr.Hdr = hdr
+	return rr.unpack(msg, off)
+}
+
+func (rr *EUI48) fill(hdr RR_Header, msg []byte, off int) (off1 int, err error) {
+	rr.Hdr = hdr
+	return rr.unpack(msg, off)
+}
+
+func (rr *EUI64) fill(hdr RR_Header, msg []byte, off int) (off1 int, err error) {
+	rr.Hdr = hdr
+	return rr.unpack(msg, off)
+}
+
+func (rr *GID) fill(hdr RR_Header, msg []byte, off int) (off1 int, err error) {
+	rr.Hdr = hdr
+	return rr.unpack(msg, off)
+}
+
+func (rr *GPOS) fill(hdr RR_Header, msg []byte, off int) (off1 int, err error) {
+	rr.Hdr = hdr
+	return rr.unpack(msg, off)
+}
+
+func (rr *HINFO) fill(hdr RR_Header, msg []byte, off int) (off1 int, err error) {
+	rr.Hdr = hdr
+	return rr.unpack(msg, off)
+}
+
+func (rr *HIP) fill(hdr RR_Header, msg []byte, off int) (off1 int, err error) {
+	rr.Hdr = hdr
+	return rr.unpack(msg, off)
+}
+
+func (rr *HTTPS) fill(hdr RR_Header, msg []byte, off int) (off1 int, err error) {
+	rr.Hdr = hdr
+	return rr.unpack(msg, off)
+}
+
+func (rr *IPSECKEY) fill(hdr RR_Header, msg []byte, off int) (off1 int, err error) {
+	rr.Hdr = hdr
+	return rr.unpack(msg, off)
+}
+
+func (rr *ISDN) fill(hdr RR_Header, msg []byte, off int) (off1 int, err error) {
+	rr.Hdr = hdr
+	return rr.unpack(msg, off)
+}
+
+func (rr *KEY) fill(hdr RR_Header, msg []byte, off int) (off1 int, err error) {
+	rr.Hdr = hdr
+	return rr.unpack(msg, off)
+}
+
+func (rr *KX) fill(hdr RR_Header, msg []byte, off int) (off1 int, err error) {
+	rr.Hdr = hdr
+	return rr.unpack(msg, off)
+}
+
+func (rr *L32) fill(hdr RR_Header, msg []byte, off int) (off1 int, err error) {
+	rr.Hdr = hdr
+	return rr.unpack(msg, off)
+}
+
+func (rr *L64) fill(hdr RR_Header, msg []byte, off int) (off1 int, err error) {
+	rr.Hdr = hdr
+	return rr.unpack(msg, off)
+}
+
+func (rr *LOC) fill(hdr RR_Header, msg []byte, off int) (off1 int, err error) {
+	rr.Hdr = hdr
+	return rr.unpack(msg, off)
+}
+
+func (rr *LP) fill(hdr RR_Header, msg []byte, off int) (off1 int, err error) {
+	rr.Hdr = hdr
+	return rr.unpack(msg, off)
+}
+
+func (rr *MB) fill(hdr RR_Header, msg []byte, off int) (off1 int, err error) {
+	rr.Hdr = hdr
+	return rr.unpack(msg, off)
+}
+
+func (rr *MD) fill(hdr RR_Header, msg []byte, off int) (off1 int, err error) {
+	rr.Hdr = hdr
+	return rr.unpack(msg, off)
+}
+
+func (rr *MF) fill(hdr RR_Header, msg []byte, off int) (off1 int, err error) {
+	rr.Hdr = hdr
+	return rr.unpack(msg, off)
+}
+
+func (rr *MG) fill(hdr RR_Header, msg []byte, off int) (off1 int, err error) {
+	rr.Hdr = hdr
+	return rr.unpack(msg, off)
+}
+
+func (rr *MINFO) fill(hdr RR_Header, msg []byte, off int) (off1 int, err error) {
+	rr.Hdr = hdr
+	return rr.unpack(msg, off)
+}
+
+func (rr *MR) fill(hdr RR_Header, msg []byte, off int) (off1 int, err error) {
+	rr.Hdr = hdr
+	return rr.unpack(msg, off)
+}
+
+func (rr *MX) fill(hdr RR_Header, msg []byte, off int) (off1 int, err error) {
+	rr.Hdr = hdr
+	return rr.unpack(msg, off)
+}
+
+func (rr *NAPTR) fill(hdr RR_Header, msg []byte, off int) (off1 int, err error) {
+	rr.Hdr = hdr
+	return rr.unpack(msg, off)
+}
+
+func (rr *NID) fill(hdr RR_Header, msg []byte, off int) (off1 int, err error) {
+	rr.Hdr = hdr
+	return rr.unpack(msg, off)
+}
+
+func (rr *NIMLOC) fill(hdr RR_Header, msg []byte, off int) (off1 int, err error) {
+	rr.Hdr = hdr
+	return rr.unpack(msg, off)
+}
+
+func (rr *NINFO) fill(hdr RR_Header, msg []byte, off int) (off1 int, err error) {
+	rr.Hdr = hdr
+	return rr.unpack(msg, off)
+}
+
+func (rr *NS) fill(hdr RR_Header, msg []byte, off int) (off1 int, err error) {
+	rr.Hdr = hdr
+	return rr.unpack(msg, off)
+}
+
+func (rr *NSAPPTR) fill(hdr RR_Header, msg []byte, off int) (off1 int, err error) {
+	rr.Hdr = hdr
+	return rr.unpack(msg, off)
+}
+
+func (rr *NSEC) fill(hdr RR_Header, msg []byte, off int) (off1 int, err error) {
+	rr.Hdr = hdr
+	return rr.unpack(msg, off)
+}
+
+func (rr *NSEC3) fill(hdr RR_Header, msg []byte, off int) (off1 int, err error) {
+	rr.Hdr = hdr
+	return rr.unpack(msg, off)
+}
+
+func (rr *NSEC3PARAM) fill(hdr RR_Header, msg []byte, off int) (off1 int, err error) {
+	rr.Hdr = hdr
+	return rr.unpack(msg, off)
+}
+
+func (rr *NULL) fill(hdr RR_Header, msg []byte, off int) (off1 int, err error) {
+	rr.Hdr = hdr
+	return rr.unpack(msg, off)
+}
+
+func (rr *NXT) fill(hdr RR_Header, msg []byte, off int) (off1 int, err error) {
+	rr.Hdr = hdr
+	return rr.unpack(msg, off)
+}
+
+func (rr *OPENPGPKEY) fill(hdr RR_Header, msg []byte, off int) (off1 int, err error) {
+	rr.Hdr = hdr
+	return rr.unpack(msg, off)
+}
+
+func (rr *OPT) fill(hdr RR_Header, msg []byte, off int) (off1 int, err error) {
+	rr.Hdr = hdr
+	return rr.unpack(msg, off)
+}
+
+func (rr *PTR) fill(hdr RR_Header, msg []byte, off int) (off1 int, err error) {
+	rr.Hdr = hdr
+	return rr.unpack(msg, off)
+}
+
+func (rr *PX) fill(hdr RR_Header, msg []byte, off int) (off1 int, err error) {
+	rr.Hdr = hdr
+	return rr.unpack(msg, off)
+}
+
+func (rr *RFC3597) fill(hdr RR_Header, msg []byte, off int) (off1 int, err error) {
+	rr.Hdr = hdr
+	return rr.unpack(msg, off)
+}
+
+func (rr *RKEY) fill(hdr RR_Header, msg []byte, off int) (off1 int, err error) {
+	rr.Hdr = hdr
+	return rr.unpack(msg, off)
+}
+
+func (rr *RP) fill(hdr RR_Header, msg []byte, off int) (off1 int, err error) {
+	rr.Hdr = hdr
+	return rr.unpack(msg, off)
+}
+
+func (rr *RRSIG) fill(hdr RR_Header, msg []byte, off int) (off1 int, err error) {
+	rr.Hdr = hdr
+	return rr.unpack(msg, off)
+}
+
+func (rr *RT) fill(hdr RR_Header, msg []byte, off int) (off1 int, err error) {
+	rr.Hdr = hdr
+	return rr.unpack(msg, off)
+}
+
+func (rr *SIG) fill(hdr RR_Header, msg []byte, off int) (off1 int, err error) {
+	rr.Hdr = hdr
+	return rr.unpack(msg, off)
+}
+
+func (rr *SMIMEA) fill(hdr RR_Header, msg []byte, off int) (off1 int, err error) {
+	rr.Hdr = hdr
+	return rr.unpack(msg, off)
+}
+
+func (rr *SOA) fill(hdr RR_Header, msg []byte, off int) (off1 int, err error) {
+	rr.Hdr = hdr
+	return rr.unpack(msg, off)
+}
+
+func (rr *SPF) fill(hdr RR_Header, msg []byte, off int) (off1 int, err error) {
+	rr.Hdr = hdr
+	return rr.unpack(msg, off)
+}
+
+func (rr *SRV) fill(hdr RR_Header, msg []byte, off int) (off1 int, err error) {
+	rr.Hdr = hdr
+	return rr.unpack(msg, off)
+}
+
+func (rr *SSHFP) fill(hdr RR_Header, msg []byte, off int) (off1 int, err error) {
+	rr.Hdr = hdr
+	return rr.unpack(msg, off)
+}
+
+func (rr *SVCB) fill(hdr RR_Header, msg []byte, off int) (off1 int, err error) {
+	rr.Hdr = hdr
+	return rr.unpack(msg, off)
+}
+
+func (rr *TA) fill(hdr RR_Header, msg []byte, off int) (off1 int, err error) {
+	rr.Hdr = hdr
+	return rr.unpack(msg, off)
+}
+
+func (rr *TALINK) fill(hdr RR_Header, msg []byte, off int) (off1 int, err error) {
+	rr.Hdr = hdr
+	return rr.unpack(msg, off)
+}
+
+func (rr *TKEY) fill(hdr RR_Header, msg []byte, off int) (off1 int, err error) {
+	rr.Hdr = hdr
+	return rr.unpack(msg, off)
+}
+
+func (rr *TLSA) fill(hdr RR_Header, msg []byte, off int) (off1 int, err error) {
+	rr.Hdr = hdr
+	return rr.unpack(msg, off)
+}
+
+func (rr *TSIG) fill(hdr RR_Header, msg []byte, off int) (off1 int, err error) {
+	rr.Hdr = hdr
+	return rr.unpack(msg, off)
+}
+
+func (rr *TXT) fill(hdr RR_Header, msg []byte, off int) (off1 int, err error) {
+	rr.Hdr = hdr
+	return rr.unpack(msg, off)
+}
+
+func (rr *UID) fill(hdr RR_Header, msg []byte, off int) (off1 int, err error) {
+	rr.Hdr = hdr
+	return rr.unpack(msg, off)
+}
+
+func (rr *UINFO) fill(hdr RR_Header, msg []byte, off int) (off1 int, err error) {
+	rr.Hdr = hdr
+	return rr.unpack(msg, off)
+}
+
+func (rr *URI) fill(hdr RR_Header, msg []byte, off int) (off1 int, err error) {
+	rr.Hdr = hdr
+	return rr.unpack(msg, off)
+}
+
+func (rr *X25) fill(hdr RR_Header, msg []byte, off int) (off1 int, err error) {
+	rr.Hdr = hdr
+	return rr.unpack(msg, off)
+}
+
+func (rr *ZONEMD) fill(hdr RR_Header, msg []byte, off int) (off1 int, err error) {
+	rr.Hdr = hdr
+	return rr.unpack(msg, off)
+}

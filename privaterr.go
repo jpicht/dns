@@ -67,6 +67,13 @@ func (r *PrivateRR) unpack(msg []byte, off int) (int, error) {
 	return off, err
 }
 
+func (r *PrivateRR) fill(hdr RR_Header, msg []byte, off int) (int, error) {
+	r.Hdr = hdr
+	off1, err := r.Data.Unpack(msg[off:])
+	off += off1
+	return off, err
+}
+
 func (r *PrivateRR) parse(c *zlexer, origin string) *ParseError {
 	var l lex
 	text := make([]string, 0, 2) // could be 0..N elements, median is probably 1
